@@ -5,8 +5,8 @@ import './memory.css';
 
 //Dummy data for the images, replace with your actual images
 const images = [
-  { id: 1, src: './assets/one.jpg', clicked: false },
-  { id: 2, src: '/assets/two.jpg', clicked: false },
+  { id: 1, src: './one.jpg', clicked: false },
+  { id: 2, src: './two.jpg', clicked: false },
   { id: 3, src: './three.jpg', clicked: false },
   { id: 4, src: './four.jpg', clicked: false },
   { id: 5, src: './five.jpg', clicked: false },
