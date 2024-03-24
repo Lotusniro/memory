@@ -5,21 +5,21 @@ import './memory.css';
 
 //Dummy data for the images, replace with your actual images
 const images = [
-  { id: 1, src: '/one.jpg', clicked: false },
-  { id: 2, src: '/two.jpg', clicked: false },
-  { id: 3, src: '/three.jpg', clicked: false },
-  { id: 4, src: '/four.jpg', clicked: false },
-  { id: 5, src: '/five.jpg', clicked: false },
-  { id: 6, src: '/six.jpg', clicked: false },
-  { id: 7, src: '/seven.jpg', clicked: false },
-  { id: 8, src: '/eight.jpg', clicked: false },
-  { id: 9, src: '/aa.jpeg', clicked: false },
-  { id: 10, src: '/bb.jpeg', clicked: false },
-  { id: 11, src: '/cc.jpeg', clicked: false },
-  { id: 12, src: '/jon.jpeg', clicked: false },
-  { id: 13, src: '/sponge.png', clicked: false },
-  { id: 14, src: '/nnn.webp', clicked: false },
-  { id: 15, src: '/op.jpeg', clicked: false },
+  { id: 1, src: './one.jpg', clicked: false },
+  { id: 2, src: './two.jpg', clicked: false },
+  { id: 3, src: './three.jpg', clicked: false },
+  { id: 4, src: './four.jpg', clicked: false },
+  { id: 5, src: './five.jpg', clicked: false },
+  { id: 6, src: './six.jpg', clicked: false },
+  { id: 7, src: './seven.jpg', clicked: false },
+  { id: 8, src: './eight.jpg', clicked: false },
+  { id: 9, src: './aa.jpeg', clicked: false },
+  { id: 10, src: './bb.jpeg', clicked: false },
+  { id: 11, src: './cc.jpeg', clicked: false },
+  { id: 12, src: './jon.jpeg', clicked: false },
+  { id: 13, src: './sponge.png', clicked: false },
+  { id: 14, src: './nnn.webp', clicked: false },
+  { id: 15, src: './op.jpeg', clicked: false },
 
 
 
