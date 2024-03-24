@@ -1,9 +1,7 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './memory.css';
 
-
-//Dummy data for the images, replace with your actual images
+// Assuming the images array is defined as shown in your snippet
 const images = [
   { id: 1, src: './one.jpg', clicked: false },
   { id: 2, src: './two.jpg', clicked: false },
@@ -20,35 +18,23 @@ const images = [
   { id: 13, src: './sponge.png', clicked: false },
   { id: 14, src: './nnn.webp', clicked: false },
   { id: 15, src: './op.jpeg', clicked: false },
-
-
-
-
-  // { id: 1, src: '../src/assets/images/one.jpg', clicked: false },
-  // { id: 9, src: '../src/assets/images/nine.jpg', clicked: false },
 ];
 
 function MemoryGame() {
   const [gameImages, setGameImages] = useState(images);
   const [score, setScore] = useState(0);
 
-  //if a image cliked lets add 1 to the score
-  //if the image is clicked again then score -1 and alert the user clicked the image again
-  //when 5th round game is over
-
-  const handleImageClick = (id ) => {
+  const handleImageClick = (id) => {
     const updatedImages = gameImages.map((image) => {
       if (image.id === id) {
         if (image.clicked) {
-          //image.cliked means the image is already clicked
-          //clicked is a met
+          // The image is already clicked, game over.
           alert('Game Over');
-          setScore(0);
+          setTimeout(() => window.location.reload(), 100); // Reload the page after a short delay
           return { ...image, clicked: false };
-        }else{ 
-          setScore(score + 1)
+        } else { 
+          setScore(score + 1);
         }
-       
         return { ...image, clicked: true };
       }
       return image;
@@ -56,13 +42,12 @@ function MemoryGame() {
     setGameImages(updatedImages);
   }
 
-useEffect(() => {
-    setGameImages(shuffleArray(gameImages));
-  }
-    , [score]);
+  useEffect(() => {
+    // This effect shuffles the images each time the score changes.
+    setGameImages(shuffleArray([...gameImages]));
+  }, [score]);
 
   const shuffleArray = (array) => {
-
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -70,18 +55,15 @@ useEffect(() => {
     return array;
   }
 
-  
   return (
     <div>
- 
-      <h2 >Score: {score}</h2>
+      <h2>Score: {score}</h2>
       <div className='mm-game'>
         {gameImages.map((image) => (
           <img
             key={image.id}
             src={image.src}
             alt={`Memory game piece ${image.id}`}
-
             onClick={() => handleImageClick(image.id)}
           />
         ))}
