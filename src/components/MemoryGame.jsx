@@ -30,7 +30,7 @@ function MemoryGame() {
         if (image.clicked) {
           // The image is already clicked, game over.
           alert('Game Over');
-          setTimeout(() => window.location.reload(), 100); // Reload the page after a short delay
+          setTimeout(() => window.location.reload(),0); // Reload the page after a short delay
           return { ...image, clicked: false };
         } else { 
           setScore(score + 1);
